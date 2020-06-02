@@ -2,7 +2,7 @@
 Small gem to manage executing looping processes and signal handling.
 
 <p align="center">
-  <a href="https://badge.fury.io/rb/sigurd"><img src="https://badge.fury.io/rb/deimos-ruby.svg" alt="Gem Version" height="18"></a>
+  <a href="https://badge.fury.io/rb/sigurd"><img src="https://badge.fury.io/rb/sigurd.svg" alt="Gem Version" height="18"></a>
   <a href="https://codeclimate.com/github/flipp-oss/sigurd/maintainability"><img src="https://api.codeclimate.com/v1/badges/a5fc45a193abadc4e45b/maintainability" /></a>
 </p>
 
