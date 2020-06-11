@@ -83,14 +83,11 @@ is no limit to retries.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/flipp-oss/deimos .
-
-We have more information on the [internal architecture](docs/ARCHITECTURE.md) of Deimos
-for contributors!
+Bug reports and pull requests are welcome on GitHub at https://github.com/flipp-oss/sigurd .
 
 ### Linting
 
-Deimos uses Rubocop to lint the code. Please run Rubocop on your code 
+Sigurd uses Rubocop to lint the code. Please run Rubocop on your code 
 before submitting a PR.
 
 ---
