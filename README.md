@@ -73,7 +73,7 @@ If you have only a single runner, you can pass it into the `SignalHandler`
 directly, without using an `Executor`:
 
 ```ruby
-  Sigurd::SignalHandler.new(executor).run!
+  Sigurd::SignalHandler.new(runner).run!
 ```
 
 By default, if any of your runners fails, Sigurd will use an exponential
