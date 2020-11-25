@@ -30,7 +30,7 @@ are for bugfixes or new functionality which does not affect existing code. You
 should be locking your Gemfile to the minor version:
 
 ```ruby
-gem 'sigurd', '0.0.1'
+gem 'sigurd', '0.0.3'
 ```
 
 # Usage

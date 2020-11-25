@@ -5,6 +5,7 @@ module Sigurd
   # signals to ask them to stop nicely.
   class SignalHandler
     SIGNALS = %i(INT TERM QUIT).freeze
+    attr_reader :runner
 
     # Takes any object that responds to the `start` and `stop` methods.
     # @param runner[#start, #stop]
@@ -35,7 +36,7 @@ module Sigurd
 
   private
 
-    attr_reader :reader, :writer, :signal_queue, :runner
+    attr_reader :reader, :writer, :signal_queue
 
     # https://stackoverflow.com/questions/29568298/run-code-when-signal-is-sent-but-do-not-trap-the-signal-in-ruby
     def prepend_handler(signal)
