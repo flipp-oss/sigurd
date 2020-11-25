@@ -35,7 +35,7 @@ module Sigurd
 
   private
 
-    attr_reader :reader, :writer, :signal_queue, :executor
+    attr_reader :reader, :writer, :signal_queue, :runner
 
     # https://stackoverflow.com/questions/29568298/run-code-when-signal-is-sent-but-do-not-trap-the-signal-in-ruby
     def prepend_handler(signal)

@@ -7,5 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## [0.0.2] - 2020-11-25
+- Allow to access the executor from outside the signal handler.
+
 ## [0.0.1] - 2020-06-02
 - Initial release.

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sigurd (0.0.1)
+    sigurd (0.0.2)
       concurrent-ruby (~> 1)
       exponential-backoff
 
