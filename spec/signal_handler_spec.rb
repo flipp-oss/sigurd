@@ -12,19 +12,19 @@ RSpec.describe Sigurd::SignalHandler do
 
       signal_handler = described_class.new(runner)
       Thread.new { sleep 1; Process.kill('TERM', 0) }
-      expect { signal_handler.run! }.to raise_error(SystemExit)
+      expect { signal_handler.run! }.to raise_error(SignalException)
     end
 
-    context 'when stay_alive_on_signal is true' do
+    context 'when exit_on_signal is true' do
       it 'should raise a SignalException' do
-        Sigurd.stay_alive_on_signal = true
+        Sigurd.exit_on_signal = true
         runner = TestRunners::TestRunner.new
         expect(runner).to receive(:start)
         expect(runner).to receive(:stop)
 
         signal_handler = described_class.new(runner)
         Thread.new { sleep 1; Process.kill('TERM', 0) }
-        expect { signal_handler.run! }.to raise_error(SignalException)
+        expect { signal_handler.run! }.to raise_error(SystemExit)
       end
     end
 

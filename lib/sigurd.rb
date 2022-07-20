@@ -8,7 +8,7 @@ require 'sigurd/signal_handler'
 module Sigurd
 
   class << self
-    attr_accessor :stay_alive_on_signal
+    attr_accessor :exit_on_signal
   end
 
 end

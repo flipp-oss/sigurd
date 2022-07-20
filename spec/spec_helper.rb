@@ -57,6 +57,6 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    Sigurd.stay_alive_on_signal = false
+    Sigurd.exit_on_signal = false
   end
 end

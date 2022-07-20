@@ -25,10 +25,10 @@ module Sigurd
         case signal
         when *SIGNALS
           @runner.stop
-          if Sigurd.stay_alive_on_signal
-            raise(SignalException, signal)
-          else
+          if Sigurd.exit_on_signal
             exit 0
+          else
+            raise(SignalException, signal)
           end
         else
           ready = IO.select([reader, writer])
