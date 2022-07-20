@@ -86,7 +86,7 @@ is no limit to retries.
 By default, sigurd will exit the process when a TERM, KILL or QUIT signal is received. You can change this 
 behavior to instead raise the original `SignalException` by setting
 
-    Sigurd.stay_alive_on_signal = true
+    Sigurd.exit_on_signal = true
 
 ## Contributing
 
