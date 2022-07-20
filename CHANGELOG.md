@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## UNRELEASED
 
+## [0.1.0] - 2022-07-20
+- Added `exit_on_signal` to exit instead of raising a `SignalException`. Fixes #1.
+
 ## [0.0.3] - 2020-11-25
 - Allow to access the executor from outside the signal handler.
 - Use `require "sigurd"` without having to require files individually.

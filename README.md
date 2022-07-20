@@ -81,6 +81,13 @@ backoff to wait before restarting it. You can instead use the `sleep_seconds`
 setting to always sleep a fixed amount of time before retrying. There
 is no limit to retries.
 
+## Configuration
+
+By default, sigurd will exit the process when a TERM, KILL or QUIT signal is received. You can change this 
+behavior to instead raise the original `SignalException` by setting
+
+    Sigurd.exit_on_signal = true
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/flipp-oss/sigurd .
