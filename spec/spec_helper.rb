@@ -55,4 +55,8 @@ RSpec.configure do |config|
     mocks.yield_receiver_to_any_instance_implementation_blocks = true
     mocks.verify_partial_doubles = true
   end
+
+  config.before(:each) do
+    Sigurd.stay_alive_on_signal = false
+  end
 end

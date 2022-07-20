@@ -21,10 +21,15 @@ module Sigurd
       @runner.start
 
       loop do
-        case signal_queue.pop
+        signal = signal_queue.pop
+        case signal
         when *SIGNALS
           @runner.stop
-          break
+          if Sigurd.stay_alive_on_signal
+            raise(SignalException, signal)
+          else
+            exit 0
+          end
         else
           ready = IO.select([reader, writer])
 
@@ -41,9 +46,8 @@ module Sigurd
     # https://stackoverflow.com/questions/29568298/run-code-when-signal-is-sent-but-do-not-trap-the-signal-in-ruby
     def prepend_handler(signal)
       previous = Signal.trap(signal) do
-        previous = -> { raise SignalException, signal } unless previous.respond_to?(:call)
         yield
-        previous.call
+        previous.call if previous&.respond_to?(:call)
       end
     end
 
